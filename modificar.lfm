@@ -1,0 +1,100 @@
+object Form2: TForm2
+  Left = 509
+  Height = 160
+  Top = 345
+  Width = 200
+  HorzScrollBar.Page = 231
+  HorzScrollBar.Range = 225
+  VertScrollBar.Page = 209
+  VertScrollBar.Range = 201
+  BorderStyle = bsToolWindow
+  Caption = 'Editar'
+  ClientHeight = 160
+  ClientWidth = 200
+  FormStyle = fsStayOnTop
+  OnShow = FormShow
+  LCLVersion = '1.0.12.0'
+  object Button1: TButton
+    Left = 24
+    Height = 25
+    Top = 128
+    Width = 74
+    Caption = 'Acceptar'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 104
+    Height = 25
+    Top = 128
+    Width = 75
+    Caption = 'Cancelar'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 112
+    Height = 23
+    Top = 8
+    Width = 80
+    TabOrder = 2
+    Text = 'Edit3'
+  end
+  object Edit1: TEdit
+    Left = 112
+    Height = 23
+    Top = 33
+    Width = 80
+    TabOrder = 3
+    Text = 'Edit1'
+  end
+  object Edit2: TEdit
+    Left = 112
+    Height = 23
+    Top = 58
+    Width = 80
+    TabOrder = 4
+    Text = 'Edit2'
+  end
+  object ColorButton1: TColorButton
+    Left = 112
+    Height = 25
+    Top = 87
+    Width = 75
+    BorderWidth = 2
+    ButtonColorSize = 16
+    ButtonColor = clMaroon
+  end
+  object Label3: TLabel
+    Left = 8
+    Height = 16
+    Top = 96
+    Width = 33
+    Caption = 'Color:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 8
+    Height = 16
+    Top = 65
+    Width = 29
+    Caption = 'Peso:'
+    ParentColor = False
+  end
+  object Label1: TLabel
+    Left = 8
+    Height = 16
+    Top = 40
+    Width = 101
+    Caption = 'Velocidad Máxima:'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 10
+    Height = 16
+    Top = 15
+    Width = 48
+    Caption = 'Nombre:'
+    ParentColor = False
+  end
+end

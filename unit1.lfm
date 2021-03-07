@@ -1,0 +1,391 @@
+object Form1: TForm1
+  Left = 601
+  Height = 752
+  Top = 191
+  Width = 969
+  Caption = 'Estanque de patos'
+  ClientHeight = 0
+  ClientWidth = 0
+  DesignTimePPI = 120
+  OnClick = FormClick
+  OnCreate = FormCreate
+  LCLVersion = '2.0.12.0'
+  object Button4: TButton
+    AnchorSideLeft.Control = GroupBox1
+    AnchorSideTop.Control = GroupBox3
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = GroupBox1
+    AnchorSideRight.Side = asrCenter
+    Left = 794
+    Height = 30
+    Top = 700
+    Width = 149
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 19
+    BorderSpacing.Top = 12
+    Caption = 'Mostrar Estadísticas'
+    OnClick = Button4Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object GroupBox1: TGroupBox
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 775
+    Height = 120
+    Top = 110
+    Width = 188
+    Anchors = [akTop, akRight]
+    BorderSpacing.Around = 6
+    Caption = 'Simulación'
+    ClientHeight = 95
+    ClientWidth = 184
+    ParentFont = False
+    TabOrder = 1
+    object Button2: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 21
+      Height = 31
+      Top = 9
+      Width = 68
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Detener'
+      OnClick = Button2Click
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Button3: TButton
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 99
+      Height = 31
+      Top = 9
+      Width = 76
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Un Paso'
+      Enabled = False
+      OnClick = Button3Click
+      ParentFont = False
+      TabOrder = 1
+    end
+    object TrackBar5: TTrackBar
+      Left = 29
+      Height = 31
+      Top = 60
+      Width = 129
+      Max = 30
+      Min = 1
+      Position = 20
+      ParentFont = False
+      TabOrder = 2
+    end
+    object Label1: TLabel
+      Left = 19
+      Height = 20
+      Top = 40
+      Width = 69
+      Caption = 'Velocidad:'
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object GroupBox2: TGroupBox
+    AnchorSideLeft.Control = GroupBox1
+    AnchorSideTop.Control = GroupBox1
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = GroupBox1
+    AnchorSideRight.Side = asrBottom
+    Left = 775
+    Height = 120
+    Top = 236
+    Width = 188
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Dibujo'
+    ClientHeight = 95
+    ClientWidth = 184
+    ParentFont = False
+    TabOrder = 2
+    object CheckBox1: TCheckBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 15
+      Height = 24
+      Top = -1
+      Width = 148
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Dibujar Relaciones'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object CheckBox3: TCheckBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 16
+      Height = 24
+      Top = 28
+      Width = 126
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Dibujar Fuerzas'
+      ParentFont = False
+      TabOrder = 1
+    end
+    object CheckBox4: TCheckBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 17
+      Height = 24
+      Top = 59
+      Width = 131
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Dibujar Número'
+      ParentFont = False
+      TabOrder = 2
+    end
+  end
+  object GroupBox3: TGroupBox
+    AnchorSideLeft.Control = GroupBox1
+    AnchorSideLeft.Side = asrCenter
+    AnchorSideTop.Control = GroupBox2
+    AnchorSideTop.Side = asrBottom
+    AnchorSideRight.Control = GroupBox1
+    AnchorSideRight.Side = asrBottom
+    Left = 776
+    Height = 332
+    Top = 356
+    Width = 187
+    Anchors = [akTop, akLeft, akRight]
+    Caption = 'Comportamiento'
+    ClientHeight = 307
+    ClientWidth = 183
+    ParentFont = False
+    TabOrder = 3
+    object TrackBar1: TTrackBar
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 43
+      Height = 30
+      Top = 26
+      Width = 131
+      Max = 400
+      Position = 85
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      ParentFont = False
+      TabOrder = 0
+    end
+    object Label6: TLabel
+      Left = 19
+      Height = 20
+      Top = 4
+      Width = 42
+      Caption = 'Radio:'
+      ParentColor = False
+      ParentFont = False
+    end
+    object TrackBar2: TTrackBar
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 45
+      Height = 30
+      Top = 86
+      Width = 130
+      Max = 60
+      Position = 30
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      ParentFont = False
+      TabOrder = 1
+    end
+    object Label4: TLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 20
+      Height = 20
+      Top = 61
+      Width = 77
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Separación:'
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label3: TLabel
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 18
+      Height = 20
+      Top = 121
+      Width = 64
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Cohesión:'
+      ParentColor = False
+      ParentFont = False
+    end
+    object TrackBar3: TTrackBar
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 44
+      Height = 30
+      Top = 144
+      Width = 129
+      Max = 60
+      Position = 30
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      ParentFont = False
+      TabOrder = 2
+    end
+    object TrackBar4: TTrackBar
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 45
+      Height = 30
+      Top = 204
+      Width = 130
+      Max = 200
+      Position = 100
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      ParentFont = False
+      TabOrder = 3
+    end
+    object Label7: TLabel
+      Left = 19
+      Height = 20
+      Top = 184
+      Width = 73
+      Caption = 'Alineación:'
+      ParentColor = False
+      ParentFont = False
+    end
+    object CheckBox2: TCheckBox
+      AnchorSideLeft.Side = asrBottom
+      AnchorSideRight.Control = Owner
+      AnchorSideRight.Side = asrBottom
+      Left = 23
+      Height = 24
+      Top = 240
+      Width = 123
+      Anchors = []
+      BorderSpacing.Left = 25
+      BorderSpacing.Right = 25
+      BorderSpacing.Around = 11
+      Caption = 'Huir del Cursor'
+      ParentFont = False
+      TabOrder = 4
+    end
+    object CheckBox5: TCheckBox
+      Left = 21
+      Height = 24
+      Top = 274
+      Width = 126
+      Caption = 'Activar Paredes'
+      ParentFont = False
+      TabOrder = 5
+    end
+  end
+  object GroupBox4: TGroupBox
+    AnchorSideLeft.Control = GroupBox1
+    AnchorSideTop.Control = Owner
+    AnchorSideRight.Control = GroupBox1
+    AnchorSideRight.Side = asrBottom
+    AnchorSideBottom.Control = GroupBox1
+    Left = 775
+    Height = 104
+    Top = 0
+    Width = 188
+    Anchors = [akTop, akLeft, akRight, akBottom]
+    Caption = 'Gestionar'
+    ClientHeight = 79
+    ClientWidth = 184
+    ParentFont = False
+    TabOrder = 4
+    object RadioButton1: TRadioButton
+      Left = 40
+      Height = 24
+      Top = 0
+      Width = 59
+      Caption = 'Crear'
+      Checked = True
+      ParentFont = False
+      TabOrder = 2
+      TabStop = True
+    end
+    object RadioButton2: TRadioButton
+      Left = 40
+      Height = 24
+      Top = 30
+      Width = 88
+      Caption = 'Modificar'
+      ParentFont = False
+      TabOrder = 0
+    end
+    object RadioButton3: TRadioButton
+      Left = 40
+      Height = 24
+      Top = 60
+      Width = 78
+      Caption = 'Eliminar'
+      ParentFont = False
+      TabOrder = 1
+    end
+  end
+  object Timer1: TTimer
+    Interval = 20
+    OnTimer = Timer1Timer
+    Left = 10
+    Top = 10
+  end
+  object IdleTimer1: TIdleTimer
+    Interval = 40
+    OnTimer = IdleTimer1Timer
+    Left = 80
+    Top = 10
+  end
+  object Timer2: TTimer
+    OnTimer = Timer2Timer
+    Left = 160
+    Top = 10
+  end
+end
